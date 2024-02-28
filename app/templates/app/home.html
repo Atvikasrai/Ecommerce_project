@@ -1,0 +1,142 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+
+
+
+
+{% comment %}------------------------Banner Slider Here-----------------------------------{% endcomment %}
+{% block banner %}
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            
+        <div class="carousel-item active">
+            <img src="{% static 'app\images\banner\b1.jpg' %}" class="d-block w-100" alt="b1">
+        </div>
+        
+        
+        <div class="carousel-item">
+            <img src="{% static 'app\images\banner\b2.jpg' %}" class="d-block w-100" alt="b2">
+        </div>
+
+        
+        <div class="carousel-item">
+            <img src="{% static 'app\images\banner\b3.jpg' %}" class="d-block w-100" alt="b3">
+        </div>
+    
+    </div>
+</div>
+{% endblock banner %}
+
+
+
+
+{% comment %}--------------------------------About Bussiness Information-----------------{% endcomment %}
+{% block aboutinfo %}
+<div class="container">
+    <div class="row bg-danger text-center p-5 text-white border-bottom shadow">
+        <h1>Welcome To Digitech-5G</h1>
+    </div>
+</div>
+{% endblock aboutinfo %}
+
+
+
+
+{% comment %}-------------------Main Content Start here-------------------------------- {% endcomment %}
+{% block content %}
+    <div class="container">
+        <h2 class="text-center">Top-Products</h2><br><br>
+        <div class="row container">
+
+
+{% comment %}---------------------------------apple-------------------------------------- {% endcomment %}
+            <div class="col-md-4 col-sm-4 mi-go wow-fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" 
+                style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none; ">
+                <div class="goodnesssec mi apple">
+                    <a href="{% url "category" 'SM' %}">
+                        <div class="goodnessseccont text-center">
+                            <img src="{% static "app/images/applelogo.png" %} " class="img-responsive" alt="Apple">
+                            <p class="milkpro">Apple</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+{% comment %}-----------------------------Samsung-------------------------------------{% endcomment %}
+
+<div class="col-md-4 col-sm-4 mi-go wow-fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" 
+style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none; ">
+<div class="goodnesssec mi apple">
+    <a href="{% url "category" 'SM' %}">
+        <div class="goodnessseccont text-center">
+            <img src="{% static "app/images/Samsung.jpg" %} " class="img-responsive" alt="Samsung">
+            <p class="milkpro">SAMSUNG</p>
+        </div>
+    </a>
+</div>
+</div>
+
+{% comment %}--------------------------------------mi-------------------------------- {% endcomment %}
+
+<div class="col-md-4 col-sm-4 mi-go wow-fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" 
+style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none; ">
+<div class="goodnesssec mi apple">
+    <a href="{% url "category" 'SM' %}">
+        <div class="goodnessseccont text-center">
+            <img src="{% static "app/images/mi.png" %} " class="img-responsive" alt="mi">
+            <p class="milkpro">Xiaomi</p>
+        </div>
+    </a>
+</div>
+</div>
+</div><br><br>
+
+{% comment %}----------------------------------appwatch------------------------------------- {% endcomment %}
+
+<div class="row container">
+    {% comment %} row11 {% endcomment %}
+    <div class="col-md-4 col-sm-4 mi-go wow-fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" 
+        style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none; ">
+        <div class="goodnesssec">
+            <a href="{% url "category" 'WT' %}">
+                <div class="goodnessseccont text-center">
+                    <img src="{% static "app/images/appwatch.jpg" %} " class="img-responsive" alt="appwatch">
+                    <p class="milkpro">Apple Watch Se</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+{% comment %}------------------------------------Laptop----------------------------------- {% endcomment %}
+
+<div class="col-md-4 col-sm-4 mi-go wow-fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" 
+style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none; ">
+<div class="goodnesssec">
+<a href="{% url "category" 'LAP' %}">
+<div class="goodnessseccont text-center">
+    <img src="{% static "app/images/laptop.jpg" %} " class="img-responsive" alt="laptop">
+    <p class="milkpro">Laptop</p>
+</div>
+</a>
+</div>
+</div>
+
+{% comment %}----------------------------------LedDigital--------------------------------------{% endcomment %}
+
+<div class="col-md-4 col-sm-4 mi-go wow-fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" 
+style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none; ">
+<div class="goodnesssec smbg">
+<a href="{% url "category" 'WT' %}">
+<div class="goodnessseccont text-center">
+    <img src="{% static "app/images/LedDigi.jpg" %} " class="img-responsive" alt="LedDigi">
+    <p class="milkpro">LED Digital</p>
+</div>
+</a>
+</div>
+</div>
+{% comment %}-----------------------------------end---------------------------------------{% endcomment %}
+</div>
+</div><br><br>
+{% endblock content %}
